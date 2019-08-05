@@ -19,6 +19,7 @@ RUN \
 # xvfb X11VNC
 #==================================================
   apt-get update &&\
+  apt-get -y install sudo &&\
   apt-get -qqy install \
     xvfb &&\
   apt-get -qqy install x11vnc &&\
