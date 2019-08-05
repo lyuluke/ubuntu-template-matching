@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 LABEL  maintainer="LK"
-
+ENV DEBIAN_FRONTEND noninteractive
+COPY entry_point.sh /opt/bin/entry_point.sh
 RUN \
 #==================================================
 # Ubuntu chinese source
