@@ -8,6 +8,12 @@ RUN \
   #sed -i "s@http://.*archive.ubuntu.com@http://mirrors.huaweicloud.com@g" /etc/apt/sources.list && \
   #sed -i "s@http://.*security.ubuntu.com@http://mirrors.huaweicloud.com@g" /etc/apt/sources.list && \
 #==================================================
+# xvfb X11VNC
+#==================================================
+  apt-get update &&\
+  apt-get -y install sudo &&\
+  apt-get clean && rm -rf /var/lib/apt/lists/* && \
+#==================================================
 # sudo passwd
 #==================================================
   sudo useradd seluser --shell /bin/bash --create-home &&\
@@ -19,7 +25,6 @@ RUN \
 # xvfb X11VNC
 #==================================================
   apt-get update &&\
-  apt-get -y install sudo &&\
   apt-get -qqy install \
     xvfb &&\
   apt-get -qqy install x11vnc &&\
