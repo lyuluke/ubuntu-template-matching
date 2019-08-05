@@ -43,8 +43,17 @@ RUN \
   apt-get update &&\
   apt-get -qqy --no-install-recommends install \
     python3.6 \
+    python-dev \
+    python3-dev \
     python3-pip \
-    python3-setuptools \ 
+    python3-setuptools \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    zlib1g-dev \
+    python-pip \
     curl \
     git \
     supervisor \
