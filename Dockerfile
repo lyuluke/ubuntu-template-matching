@@ -9,7 +9,7 @@ RUN \
   #sed -i "s@http://.*archive.ubuntu.com@http://mirrors.huaweicloud.com@g" /etc/apt/sources.list && \
   #sed -i "s@http://.*security.ubuntu.com@http://mirrors.huaweicloud.com@g" /etc/apt/sources.list && \
 #==================================================
-# xvfb X11VNC
+# sudo
 #==================================================
   apt-get update &&\
   apt-get -y install sudo &&\
@@ -38,6 +38,12 @@ RUN \
      fluxbox &&\
   apt-get clean && rm -rf /var/lib/apt/lists/* && \
 
+#==================================================
+# supervisor
+#==================================================
+  apt-get update && sudo apt-get install -y supervisor &&\
+  apt-get clean && rm -rf /var/lib/apt/lists/* && \
+  
 #==================================================
 # Python3.6
 #==================================================
