@@ -74,6 +74,7 @@ RUN \
   pip3 install requests &&\
   pip3 install opencv-python &&\
   pip3 install vncdotool &&\
+  pip3 install paramiko &&\
 
 #==================================================
 # apt clean
